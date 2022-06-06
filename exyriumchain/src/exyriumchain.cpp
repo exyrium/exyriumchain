@@ -254,7 +254,7 @@ namespace vexdt {
         if(paybacktoken.amount > 0)
         {
             action(permission_level{eosio::name(EXYRIUMSTAKE), eosio::name("active")},
-                (isvex ? eosio::name(VEXTOKEN) : (isdjv ? eosio::name(DJVTOKEN) : eosio::name(VXTOKEN))),
+                (isvex ? eosio::name(VEXTOKEN) : (isdjv ? eosio::name(DJVTOKEN) : (isvx ? eosio::name(VXTOKEN) : eosio::name(VYNTOKEN)))),
                 eosio::name("transfer"),
                 std::make_tuple(eosio::name(EXYRIUMSTAKE), from, paybacktoken, std::string("get back staked asset")))
                 .send();
