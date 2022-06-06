@@ -422,7 +422,7 @@ namespace vexdt {
         eosio::action act = eosio::get_action( 1, 0 );
         //print(" act.amount ",act.amount);
         //print(" act.name ",act.name);
-        eosio_assert( (act.account == eosio::name("vexcore")) || (act.name== eosio::name("transfer") && (act.account == eosio::name(VEXTOKEN)|| act.account == eosio::name(VXTOKEN)|| act.account == eosio::name(DJVTOKEN))) ," Human only! ");
+        eosio_assert( (act.account == eosio::name("vexcore")) || (act.name== eosio::name("transfer") && (act.account == eosio::name(VEXTOKEN)|| act.account == eosio::name(VXTOKEN)|| act.account == eosio::name(DJVTOKEN) || act.account == eosio::name(VYNTOKEN))) ," Human only! ");
 
         if((to == eosio::name(EXYRIUMADMIN)) && (memo.substr(0, 5) == "stake") )
         {
