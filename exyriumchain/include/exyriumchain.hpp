@@ -197,7 +197,7 @@ namespace vexdt {
     {
         auto &thiscontract = *this;
 
-        if (action == eosio::name("transfer") && (code == eosio::name(VEXTOKEN) || code == eosio::name(VXTOKEN) || code == eosio::name(DJVTOKEN)))
+        if (action == eosio::name("transfer") && (code == eosio::name(VEXTOKEN) || code == eosio::name(VXTOKEN) || code == eosio::name(DJVTOKEN) || code == eosio::name(VYNTOKEN)))
         {
             //print("  apply code name", code); //code 为那个账户触发的通知
             auto transfer_data = eosio::unpack_action_data<st_transfer>();
